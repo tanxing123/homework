@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class day5HW1 {
+
+	public static void main(String[] args) {
+		
+		/*生成一个12生肖数组。
+		getInfo（生肖）鼠--》2020
+		最近一年，
+		getInfo（2020）---》牛*/
+		
+		String[] 生肖 = {"鼠", "牛", "虎", "兔", "龙", "蛇", "马", "羊", "猴", "鸡", "狗", "猪"};
+        Scanner scanner = new Scanner(System.in);
+        int year = scanner.nextInt();
+        
+        int i = year % 12 - 4;
+
+        System.out.println(生肖[i]);
