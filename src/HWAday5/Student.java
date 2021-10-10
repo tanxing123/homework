@@ -16,10 +16,10 @@ public class Student {
     }
 
     内存图画，拍照*/
-    int id;
+    long id;
     String studentName;
     String birthday;
-    int number;
+    String number;
     String star;
     String address;
     byte gender;//0.男；1.女
