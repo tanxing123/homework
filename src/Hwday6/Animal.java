@@ -1,4 +1,5 @@
 public class Animal {
+
 	/*第一大题
 	1，考拉： name ，weigth，color， likefood，BellyPocket
 	爬上Tree climbing（xxx在爬上）
@@ -17,7 +18,7 @@ public class Animal {
 		private String color;
 		private String likefood;
 		private byte BellyPocket;//1.有2.无
-		private byte LongEars;//1.有2.无
+		
 		
 		public void setName(String name) {
 			this.name = name;
@@ -54,12 +55,7 @@ public class Animal {
 			return this.BellyPocket == 1?"有":"无";
 		}
 		
-		public void setlongEars(String LongEars) {
-			this.LongEars = (byte)("长".equals(LongEars)?1 : 2);
-		}
-		public String getlongEars() {
-			return this.LongEars == 1?"长":"短";
-		}
+		
 		
 		public Animal() {	
 		}
@@ -74,22 +70,18 @@ public class Animal {
 	public void Treeclimbing() {
 		System.out.println(name + "在爬树");
 	}
-	public void canJump() {
-		System.out.println(name + "在跳");
-	}
-	public void canFly() {
-		System.out.println(name + "在飞");
-	}
+	
 	public void showInfo() {
 		System.out.println("名字:" + getName());
 		System.out.println("体重:" + getWeight());
 		System.out.println("颜色:" + getColor());
 		System.out.println("喜爱食物:" + getLikefood());
 		System.out.println("有无腹带:" + getbellyPocket());
-		System.out.println("耳朵长短:" + getlongEars());
+		
 	}
 	
 	
 	
 
 }
+
