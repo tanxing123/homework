@@ -1,14 +1,30 @@
 package homework9;
 
+import java.util.Scanner;
+
 public class StringTest3Demo {
 
 	public static void main(String[] args) {
-		StringTest3 str = {new StringTest3(1,"luo",byte(18),
-				new StringTest3(2,"wang",byte(18),
-						new StringTest3(3,"fan",byte(18)};
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("请按照一下格式输入学生信息");
+		String string = scanner.nextLine();
+		//String string ="1:luo:18||2:wang:18||3:fan:18";
+		String[] ary1 = string.split("\\|\\|");
 		
-		System.out.println(str);
-
+		StringTest3[] strAry = new StringTest3[ary1.length];
+		
+		for(int i = 0;i<ary1.length;i++) {
+			String[] ary2 =ary1[i].split(":");
+			int idTemp = Integer.valueOf(ary2[0]);
+			byte ageTemp = Byte.valueOf(ary2[2]);
+			strAry[i] = new StringTest3(idTemp, ary2[1], ageTemp);
+		}
+			for(StringTest3 si : strAry) {
+				System.out.println(si.getName());
+			
+		}
+		
+		
 	}
 
 }
